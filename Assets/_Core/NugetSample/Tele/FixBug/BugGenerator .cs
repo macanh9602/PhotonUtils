@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class BugGenerator : MonoBehaviour
 {
-    public GameObject target;
 
-    [ContextMenu("🔥 Generate Bug")]
+#region === RUNTIME DATA ===
+public GameObject target;
+#endregion
+
+#region === DEBUG ===
+[ContextMenu("🔥 Generate Bug")]
     void GenerateBug()
     {
         // target chưa gán → crash
         target.transform.position = Vector3.zero;
     }
+#endregion
 }

@@ -1,0 +1,13 @@
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\bin\Debug\net8.0\AICheck.Core.deps.json
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\bin\Debug\net8.0\AICheck.Core.dll
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\bin\Debug\net8.0\AICheck.Core.pdb
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.csproj.AssemblyReference.cache
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.GeneratedMSBuildEditorConfig.editorconfig
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.AssemblyInfoInputs.cache
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.AssemblyInfo.cs
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.csproj.CoreCompileInputs.cache
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.sourcelink.json
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.dll
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\refint\AICheck.Core.dll
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\AICheck.Core.pdb
+d:\important\Project Unity\PhotonUtils\AICheck\AICheck.Core\obj\Debug\net8.0\ref\AICheck.Core.dll

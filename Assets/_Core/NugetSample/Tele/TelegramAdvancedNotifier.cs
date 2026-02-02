@@ -16,40 +16,40 @@ using UnityEngine.Networking;
 
 public class TelegramAdvancedNotifier : MonoBehaviour
 {
-    private ITelegramBotClient bot;
+
+    #region === INSPECTOR ===
     [SerializeField] private string botToken;
     [SerializeField] private long chatId;
     [SerializeField] private string apiKey;
+    #endregion
+
+    #region === RUNTIME DATA ===
+    private ITelegramBotClient bot;
 
     Dictionary<string, ScriptCheckContext> scriptChecks = new();
+    #endregion
 
+    #region === UNITY LIFECYCLE ===
+    void OnEnable()
+    {
+        Application.logMessageReceived += OnLog;
+    }
+    #endregion
+
+    #region Unity Methods
     void Start()
     {
         bot = new TelegramBotClient(botToken);
         bot.StartReceiving(UpdateHandler, ErrorHandler);
     }
 
-    void OnEnable()
-    {
-        Application.logMessageReceived += OnLog;
-    }
-
     void OnDisable()
     {
         Application.logMessageReceived -= OnLog;
     }
+    #endregion
 
-    void OnLog(string condition, string stackTrace, LogType type)
-    {
-        if (type != LogType.Exception) return;
-
-        _ = SendErrorAlert(
-            condition,
-            stackTrace,
-            "Runtime Exception"
-        );
-    }
-
+    #region === PUBLIC API ===
     public async Task SendErrorAlert(string errorMsg, string script, string line)
     {
         string errorId = Guid.NewGuid().ToString("N");
@@ -73,6 +73,19 @@ public class TelegramAdvancedNotifier : MonoBehaviour
             $"<b>🚨 New Error</b>\n<pre>{errorMsg}</pre>\n📍 {line}",
             parseMode: Telegram.Bot.Types.Enums.ParseMode.Html,
             replyMarkup: keyboard
+        );
+    }
+    #endregion
+
+    #region === INTERNAL LOGIC ===
+    void OnLog(string condition, string stackTrace, LogType type)
+    {
+        if (type != LogType.Exception) return;
+
+        _ = SendErrorAlert(
+            condition,
+            stackTrace,
+            "Runtime Exception"
         );
     }
 
@@ -202,18 +215,6 @@ public class TelegramAdvancedNotifier : MonoBehaviour
                ?? "No Gemini response.";
     }
 
-
-    // 🔥 TEST NGAY
-    [ContextMenu("TEST ERROR")]
-    async void Test()
-    {
-        await SendErrorAlert(
-            "NullReferenceException",
-            "player.Move();",
-            "PlayerController.cs:42"
-        );
-    }
-
     string BuildPrompt(string error, string stack)
     {
         return $@"
@@ -242,5 +243,18 @@ STACKTRACE:
 
 ";
     }
+    #endregion
+
+    #region === DEBUG ===
+    [ContextMenu("TEST ERROR")]
+    async void Test()
+    {
+        await SendErrorAlert(
+            "NullReferenceException",
+            "player.Move();",
+            "PlayerController.cs:42"
+        );
+    }
+    #endregion
 
 }

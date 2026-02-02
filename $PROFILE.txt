@@ -1,0 +1,6 @@
+function review {
+    param([string]$path)
+    # Lấy đường dẫn tuyệt đối để dotnet không bị nhầm thư mục
+    $fullPath = Resolve-Path $path
+    dotnet run --project "D:\important\Project Unity\PhotonUtils\AICheck\AICheck.Cli\AICheck.Cli.csproj" -- "$fullPath"
+}

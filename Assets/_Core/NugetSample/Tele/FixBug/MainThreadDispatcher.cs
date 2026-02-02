@@ -7,13 +7,12 @@ using UnityEngine;
 /// </summary>
 public class MainThreadDispatcher : MonoBehaviour
 {
+
+    #region === RUNTIME DATA ===
     private static readonly Queue<Action> _queue = new();
+    #endregion
 
-    public static void Enqueue(Action action)
-    {
-        lock (_queue) _queue.Enqueue(action);
-    }
-
+    #region === UNITY LIFECYCLE ===
     void Update()
     {
         lock (_queue)
@@ -22,4 +21,12 @@ public class MainThreadDispatcher : MonoBehaviour
                 _queue.Dequeue()?.Invoke();
         }
     }
+    #endregion
+
+    #region === PUBLIC API ===
+    public static void Enqueue(Action action)
+    {
+        lock (_queue) _queue.Enqueue(action);
+    }
+    #endregion
 }

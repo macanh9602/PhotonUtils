@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/vzwdK0yK2Gja7+WkzVHJztEZ4gcwPkXUaFARnzDdOMtgHLhX0eHNtt8xsnZ+1I9fucnB/WbYB0z3Op2HYcD0g==",
+  "success": true,
+  "projectFilePath": "d:\\important\\Project Unity\\PhotonUtils\\AICheck\\AICheck.Cli\\AICheck.Cli.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gumay\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.11.0\\microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
+    "C:\\Users\\gumay\\.nuget\\packages\\microsoft.codeanalysis.common\\5.0.0\\microsoft.codeanalysis.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\gumay\\.nuget\\packages\\microsoft.codeanalysis.csharp\\5.0.0\\microsoft.codeanalysis.csharp.5.0.0.nupkg.sha512",
+    "C:\\Users\\gumay\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+    "C:\\Users\\gumay\\.nuget\\packages\\system.collections.immutable\\9.0.0\\system.collections.immutable.9.0.0.nupkg.sha512",
+    "C:\\Users\\gumay\\.nuget\\packages\\system.reflection.metadata\\9.0.0\\system.reflection.metadata.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
